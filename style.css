@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --vlg:hsl(0, 0%, 95%)
+}
+html{
+    font-family: 'Lexend Deca', sans-serif;
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+body{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--vlg);
+    color: hsla(0, 0%, 100%, 0.75);
+}
+h1{
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    
+}
+.wrapper{
+    display: flex;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 290px;    
+    margin: 2rem 0;
+    height: 480px;   
+    position: relative; 
+}
+.card .card-con{
+    padding: 2.9rem;
+}
+.card1{background-color:hsl(31, 77%, 52%) ; border-bottom-left-radius: 10px;border-top-left-radius:10px;}
+.card2{background-color:hsl(184, 100%, 22%) ;}
+.card3{background-color: hsl(179, 100%, 13%); border-bottom-right-radius: 10px;border-top-right-radius:10px;}
+
+.bottom {
+    display: flex;
+    position: absolute;
+    bottom: 50px;
+}
+.btn{
+    display: block;
+    background-color: var(--vlg);
+    padding: 0.8rem 2rem ;
+    border: 0;
+    border-radius: 2rem;
+    transition: all 500ms;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+p {
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+}
+.card1 .bottom .btn {
+    color: hsl(31, 77%, 52%);
+}
+.card2 .bottom .btn{
+    color: hsl(184, 100%, 22%);
+}
+.card3 .bottom .btn {
+    color:  hsl(179, 100%, 13%);
+}
+.btn:hover{
+    color: var(--vlg);
+    border: 0.2px solid var(--vlg);
+}
+.card3 .bottom .btn:hover {
+    color:  var(--vlg);
+    background-color: hsl(179, 100%, 13%);
+    padding: calc(0.8rem-2px) 2rem ;
+}
+.card2 .bottom .btn:hover {
+    color:  var(--vlg);
+    background-color:  hsl(184, 100%, 22%);
+    padding: calc(0.8rem-2px) 2rem ;
+}
+.card1 .bottom .btn:hover {
+    color:  var(--vlg);
+    background-color: hsl(31, 77%, 52%);
+    padding: calc(0.8rem-2px) 2rem ;
+}
+
+@media (max-width:700px){
+    .wrapper{
+        flex-direction: column;
+    }
+    .card{
+        margin: 0;
+    }
+    .card1{border-top-left-radius: 10px;border-top-right-radius:10px; border-bottom-left-radius: 0;}
+    .card3{border-bottom-left-radius: 10px;border-bottom-right-radius:10px;border-top-right-radius:0; }
+}
